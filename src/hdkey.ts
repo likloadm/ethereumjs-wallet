@@ -1,6 +1,6 @@
-import Wallet from './index'
+import Wallet from "./index";
 
-import { HDKey } from 'ethereum-cryptography/hdkey'
+import { HDKey } from "ethereum-cryptography/hdkey";
 
 export default class EthereumHDKey {
   /**
@@ -10,14 +10,14 @@ export default class EthereumHDKey {
    * create one from a BIP39 mnemonic.
    */
   public static fromMasterSeed(seedBuffer: Buffer): EthereumHDKey {
-    return new EthereumHDKey(HDKey.fromMasterSeed(seedBuffer))
+    return new EthereumHDKey(HDKey.fromMasterSeed(seedBuffer));
   }
 
   /**
    * Create an instance based on a BIP32 extended private or public key.
    */
   public static fromExtendedKey(base58Key: string): EthereumHDKey {
-    return new EthereumHDKey(HDKey.fromExtendedKey(base58Key))
+    return new EthereumHDKey(HDKey.fromExtendedKey(base58Key));
   }
 
   constructor(private readonly _hdkey?: any) {}
@@ -27,30 +27,30 @@ export default class EthereumHDKey {
    */
   public privateExtendedKey(): Buffer {
     if (!this._hdkey.privateExtendedKey) {
-      throw new Error('This is a public key only wallet')
+      throw new Error("This is a public key only wallet");
     }
-    return this._hdkey.privateExtendedKey
+    return this._hdkey.privateExtendedKey;
   }
 
   /**
    * Return a BIP32 extended public key (xpub)
    */
   public publicExtendedKey(): Buffer {
-    return this._hdkey.publicExtendedKey
+    return this._hdkey.publicExtendedKey;
   }
 
   /**
    * Derives a node based on a path (e.g. m/44'/0'/0/1)
    */
   public derivePath(path: string): EthereumHDKey {
-    return new EthereumHDKey(this._hdkey.derive(path))
+    return new EthereumHDKey(this._hdkey.derive(path));
   }
 
   /**
    * Derive a node based on a child index
    */
   public deriveChild(index: number): EthereumHDKey {
-    return new EthereumHDKey(this._hdkey.deriveChild(index))
+    return new EthereumHDKey(this._hdkey.deriveChild(index));
   }
 
   /**
@@ -58,8 +58,8 @@ export default class EthereumHDKey {
    */
   public getWallet(): Wallet {
     if (this._hdkey._privateKey) {
-      return Wallet.fromPrivateKey(this._hdkey._privateKey)
+      return Wallet.fromPrivateKey(this._hdkey._privateKey);
     }
-    return Wallet.fromPublicKey(this._hdkey._publicKey, true)
+    return Wallet.fromPublicKey(this._hdkey._publicKey, true);
   }
 }

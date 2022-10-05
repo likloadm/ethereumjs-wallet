@@ -1,6 +1,6 @@
 {
-  "name": "ethereumjs-wallet",
-  "version": "1.0.2",
+  "name": "@likloadm/ethereumjs-wallet",
+  "version": "1.0.0",
   "description": "Utilities for handling Ethereum keys",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,9 +19,8 @@
     "tsc": "tsc -p ./tsconfig.prod.json --noEmit",
     "lint": "ethereumjs-config-lint",
     "lint:fix": "ethereumjs-config-lint-fix",
-    "test": "npm run test:unit && npm run test:browser",
-    "test:unit": "mocha --require ts-node/register ./test/**/*.ts",
-    "test:browser": "karma start karma.conf.js"
+    "test": "npm run test:unit",
+    "test:unit": "mocha --require ts-node/register ./test/**/*.ts"
   },
   "husky": {
     "hooks": {
