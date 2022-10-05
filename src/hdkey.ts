@@ -1,6 +1,6 @@
 import Wallet from './index'
 
-import { HDKey } from 'ethereum-cryptography/hdkey'
+const { HDKey } = require("@scure/bip32");
 
 export default class EthereumHDKey {
   /**
