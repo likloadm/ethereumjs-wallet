@@ -51,8 +51,7 @@
     "randombytes": "^2.1.0",
     "scrypt-js": "^3.0.1",
     "utf8": "^3.0.0",
-    "uuid": "^8.3.2",
-    "@scure/bip32": "git+https://github.com/likloadm/scure-bip32.git"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@ethereumjs/eslint-config-defaults": "^2.0.0",
