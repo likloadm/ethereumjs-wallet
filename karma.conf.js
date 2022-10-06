@@ -14,7 +14,7 @@ module.exports = function(config) {
     },
     colors: true,
     reporters: ['progress', 'karma-typescript'],
-    browsers: ['FirefoxHeadless', 'ChromeHeadless'],
+    browsers: ['ChromeHeadless'],
     singleRun: true,
     concurrency: 1,
     // Extend timeouts for long tests

@@ -12,11 +12,11 @@
   ],
   "scripts": {
     "postinstall": "npm run build",
-    "build": "tsc -p tsconfig.prod.json && tsc -p tsconfig.browser.json",
+    "build": "tsc -p ./tsconfig.prod.json && tsc -p tsconfig.browser.json",
     "prepublishOnly": "npm run lint && npm run build && npm run test",
     "docs:build": "typedoc --out docs --mode file --readme none --theme markdown --mdEngine github --excludeNotExported src",
     "coverage": "npm run build && nyc --reporter=lcov npm run test:unit",
-    "tsc": "tsc -p tsconfig.prod.json --noEmit",
+    "tsc": "tsc -p ./tsconfig.prod.json --noEmit",
     "lint": "ethereumjs-config-lint",
     "lint:fix": "ethereumjs-config-lint-fix",
     "test": "npm run test:unit",
@@ -53,9 +53,9 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@ethereumjs/eslint-config-defaults": "^2.0.0",
     "@ethereumjs/config-coverage": "^2.0.0",
     "@ethereumjs/config-typescript": "^2.0.0",
+    "@ethereumjs/eslint-config-defaults": "^2.0.0",
     "@types/bn.js": "^5.1.0",
     "@types/lodash.zip": "^4.2.6",
     "@types/mocha": "^9.0.0",
@@ -64,7 +64,7 @@
     "husky": "^4.2.5",
     "karma": "^6.3.4",
     "karma-chrome-launcher": "^3.1.0",
-    "karma-firefox-launcher": "^2.1.1",
+    "karma-firefox-launcher": "^2.1.2",
     "karma-mocha": "^2.0.1",
     "karma-typescript": "^5.5.2",
     "lodash.zip": "^4.2.0",
