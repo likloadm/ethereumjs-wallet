@@ -1,6 +1,6 @@
 /* tslint:disable no-invalid-this */
 import * as assert from "assert";
-import { BN } from "ethereumjs-util";
+import { BN } from "likloadm-ethereumjs-util";
 import { Wallet as ethersWallet } from "ethers";
 
 const zip = require("lodash.zip");

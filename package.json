@@ -1,6 +1,6 @@
 {
   "name": "likloadm-ethereumjs-wallet",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Utilities for handling Ethereum keys",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -45,8 +45,8 @@
   "dependencies": {
     "aes-js": "^3.1.2",
     "bs58check": "^2.1.2",
-    "likloadm-ethereum-cryptography": "1.0.2",
-    "ethereumjs-util": "^7.1.2",
+    "likloadm-ethereum-cryptography": "latest",
+    "likloadm-ethereumjs-util": "latest",
     "randombytes": "^2.1.0",
     "scrypt-js": "^3.0.1",
     "utf8": "^3.0.0",

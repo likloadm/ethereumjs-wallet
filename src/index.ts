@@ -10,7 +10,7 @@ import {
   importPublic,
   isValidPrivate,
   isValidPublic,
-} from "ethereumjs-util";
+} from "likloadm-ethereumjs-util";
 import { scrypt } from "scrypt-js";
 
 export { default as hdkey } from "./hdkey";

@@ -1,5 +1,5 @@
 import * as crypto from "crypto";
-import { keccak256, sha256, toBuffer } from "ethereumjs-util";
+import { keccak256, sha256, toBuffer } from "likloadm-ethereumjs-util";
 import { scrypt } from "scrypt-js";
 
 import Wallet from "./index";
