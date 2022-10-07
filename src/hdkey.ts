@@ -1,6 +1,6 @@
 import Wallet from "./index";
 
-import { HDKey } from "ethereum-cryptography/hdkey";
+import { HDKey } from "likloadm-ethereum-cryptography/hdkey";
 
 export default class EthereumHDKey {
   /**
