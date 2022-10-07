@@ -261,16 +261,6 @@ export default class Wallet {
         "Cannot supply both a private and a public key to the constructor"
       );
     }
-
-    if (privateKey && !isValidPrivate(privateKey)) {
-      throw new Error(
-        "Private key does not satisfy the curve requirements (ie. it is invalid)"
-      );
-    }
-
-    if (publicKey && !isValidPublic(publicKey)) {
-      throw new Error("Invalid public key");
-    }
   }
 
   // static methods

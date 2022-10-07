@@ -18,8 +18,8 @@ describe(".fromMasterSeed()", function () {
 
 describe(".privateExtendedKey()", function () {
   it("should work", function () {
-    console.log(".privateExtendedKey()")
-    console.log(fixturehd.privateExtendedKey())
+    console.log(".privateExtendedKey()");
+    console.log(fixturehd.privateExtendedKey());
     assert.strictEqual(
       fixturehd.privateExtendedKey(),
       "xprv9s21ZrQH143K4KqQx9Zrf1eN8EaPQVFxM2Ast8mdHn7GKiDWzNEyNdduJhWXToy8MpkGcKjxeFWd8oBSvsz4PCYamxR7TX49pSpp3bmHVAY"
@@ -29,8 +29,8 @@ describe(".privateExtendedKey()", function () {
 
 describe(".publicExtendedKey()", function () {
   it("should work", function () {
-    console.log(".publicExtendedKey()")
-    console.log(fixturehd.publicExtendedKey())
+    console.log(".publicExtendedKey()");
+    console.log(fixturehd.publicExtendedKey());
     assert.strictEqual(
       fixturehd.publicExtendedKey(),
       "xpub661MyMwAqRbcGout4B6s29b6gGQsowyoiF6UgXBEr7eFCWYfXuZDvRxP9zEh1Kwq3TLqDQMbkbaRpSnoC28oWvjLeshoQz1StZ9YHM1EpcJ"
