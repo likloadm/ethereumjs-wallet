@@ -8,8 +8,6 @@ import {
   toChecksumAddress,
   privateToPublic,
   importPublic,
-  isValidPrivate,
-  isValidPublic,
 } from "likloadm-ethereumjs-util";
 import { scrypt } from "scrypt-js";
 
